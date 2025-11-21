@@ -50,6 +50,15 @@ body{
     border-style: solid;
     border-width: 3px;
 }
+.secondary-photo{
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 12px 12px 2px 1px rgb(92, 92, 92);
+
+    border-color: red;
+    border-style: solid;
+    border-width: 3px;
+}
 
 .Logo{
     height: 50px;
