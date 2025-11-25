@@ -1,0 +1,5 @@
+[build]
+# remove base OR set to an empty string so Netlify uses repo root
+# base = ""    # optional
+command = "npm run build"
+publish = "dist"   # adjust to your actual publish directory
