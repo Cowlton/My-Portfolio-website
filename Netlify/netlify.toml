@@ -1,7 +1,6 @@
 ﻿[build]
 base = "/opt/build}"
 
-
 [build]
 # remove base OR set to an empty string so Netlify uses repo root
 # base = ""    # optional
