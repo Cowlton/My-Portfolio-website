@@ -20,7 +20,11 @@ li:hover{
 p{
     font-size:25px;
 }
+
 html{
+    position: relative;
+    min-height: 100%;
+    
     background: #183b1d;
     background: linear-gradient(157deg,rgba(24, 59, 29, 1) 0%, rgba(36, 138, 80, 1) 58%, rgba(20, 51, 36, 1) 100%);
     color:white;
