@@ -21,6 +21,11 @@ p{
     font-size:25px;
 }
 
+.Point{
+    color:black;
+    font-size:40px;
+}
+
 html{
     position: relative;
     min-height: 100%;
@@ -149,6 +154,25 @@ a:hover{
     border-radius: 20px;
     border-style: solid;
     border-width: 3px;
+}
+
+.TextBacground3{
+
+
+    text-align: left;
+    background: white;
+    height: fit-content;
+    
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: 12px 12px 2px 1px rgb(92, 92, 92);
+    color:black;
+    
+    width: 1000px
+    
 }
 .outer{
     text-align: center;
