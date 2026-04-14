@@ -60,6 +60,8 @@ body{
     border-color: red;
     border-style: solid;
     border-width: 3px;
+    
+    background-color: #054c05;
 }
 .secondary-photo{
     height: 350px;
