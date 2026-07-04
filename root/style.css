@@ -88,6 +88,88 @@ body{
     border-radius: 15px;
     border-color: green;
 }
+
+.secondary-photo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.secondary-photo-wrapper .fullscreen-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  line-height: 1;
+  padding: 0;
+}
+
+.secondary-photo-wrapper:hover .fullscreen-btn {
+  opacity: 1;
+}
+
+.fullscreen-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fullscreen-overlay.active {
+  display: flex;
+}
+
+.fullscreen-overlay img {
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.fullscreen-overlay.zoomed img {
+  max-width: none;
+  max-height: none;
+  object-fit: none;
+}
+
+.fullscreen-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  padding: 10px;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.fullscreen-close:hover {
+  opacity: 1;
+}
 .Banner-photo{
 
     height: 250px;
