@@ -1,0 +1,77 @@
+﻿/* The side navigation menu */
+.sidebar {
+    border-color: #517bab;
+    border-style: solid double solid solid;
+    border-width: 3px 8px 6px 3px;
+    border-radius: 20px 30px;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #22476c;
+    position: fixed;
+    height: auto;
+    overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+    border-bottom: 5px solid #517bab; /* width, style, color */
+    background-color: #02101b;
+    color: white;
+}
+
+
+/* Page content */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {
+        float: left;
+    }
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+
+
+.SkillsStyle{
+    display: inline-block;
+    background: white;
+    height: fit-content;
+    width: fit-content(300px);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border-color: red;
+    border-style: solid;
+    border-width: 3px;
+    /*
+    box-shadow: 12px 12px 2px 1px rgb(19, 58, 31);
+    */
+    color:red;
+}

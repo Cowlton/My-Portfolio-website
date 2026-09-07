@@ -1,0 +1,56 @@
+﻿.stage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ring{
+    --speed: 10s;
+    --w:120px;
+    --h:25px;
+    --depth:calc(var(--w) + var(--h));
+    --tile:-10deg;
+    --perspective:500px;
+    position: relative;
+    width: var(--w);
+    height: var(--h);
+    transform-style: preserve-3d;
+    animation: spin var(--speed) linear infinite;
+}
+.panel{
+    position: absolute;
+    inset:0;
+    background: rgb(0 0 0 / 0.73);
+    border: 2px solid rgb(var(--clr));
+    border-radius: 12px;
+    transform: rotateY(calc((var(--r) / var(--count)) * var(--i))) translateZ(var(--depth));
+    
+}
+
+@keyframes spin {
+    0% {
+        transform: perspective(var(--perspective)) rotateX(var(--tile)) rotateY(0deg); 
+    }
+    100% {
+        
+        transform: perspective(var(--perspective)) rotateX(var(--tile)) rotateY(var(--tile)) rotateY(calc(var(--r) + 10deg)); 
+    }
+}
+
+.SkillText {
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px #1e6639;
+    
+    z-index: 10;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 120px;
+    height: 100px;
+    
+}
+

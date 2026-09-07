@@ -1,0 +1,82 @@
+﻿.SkillList {
+    display: block;
+    text-align: center;
+}
+#slide{
+    --target: 4;
+}
+.item{
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.5s;
+    width: auto;
+    position: absolute;
+    --clickable:true;
+    --selected: false;
+}
+.item:hover{
+    text-shadow:0 0 10px #f1ebeb, 0 0 20px #f1ebeb, 0 0 30px #f1ebeb, 0 0 40px #f1ebeb;
+    color: white;
+    font-size: 27px;
+}
+
+.itemText{
+    display: none;
+    opacity: 0;
+}
+.SkillList .item{
+    --index: sibling-index();
+    transform: translate(0,0);
+    top: calc(var(--index) * 35px);
+    left: 100px;
+    text-align: center;
+}
+.SkillList .item:nth-child(5){
+    transform: scale(1.3);
+    --selected: true;
+}
+.SkillList .item:nth-child(1){
+    opacity: 0;
+    --clickable:false;
+    
+}
+.SkillList .item:nth-child(9){
+    opacity: 0;
+    --clickable:false;
+}
+#display{
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 1;
+}
+.Name{
+   font-size: 40px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+.section{
+    --index: sibling-index();
+    --delay: calc(0.1s + (var(--index)*0.1s));
+    opacity: 0;
+    animation: animate 1s ease-in-out var(--delay) 1 forwards;
+    display: inline-block;
+    padding: 10px;
+    max-width: 1000px;
+    text-align: left;
+}
+#aboutText{
+    
+    
+}
+@keyframes animate{
+    from{
+        opacity: 0;
+        transform: translate(0,50px);
+        filter: blur(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0,0);
+        filter: blur(0);
+    }
+}

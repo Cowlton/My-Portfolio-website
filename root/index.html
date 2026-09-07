@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="SidebarStyle.css">
+    <link rel="stylesheet" href="Skills.css">
+    <link rel="stylesheet" href="SkillList.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colton's Portfolio Sight</title>
@@ -12,39 +15,139 @@
     
 </head>
 
-
 <body class="outer">
 
 <div>
-    <p class="TextBacground1"><a href="About.html"><abbr title="About Page">About</abbr></a></p>
+    <p class="TextBacground1"><a onclick="updateDisplay('aboutText')"><abbr title="About Page">About</abbr></a></p>
+    
 </div>
 
-    <section>
+<div class="stage" style="z-index: 2; position: relative; margin-top: 10px;">
+    <div class="ring" style="--count:7; --r: 360deg;">
+        <div class="panel" style="--i:0; --clr:142, 249, 252;">C#</div>
+        <div class="panel" style="--i:1; --clr:142, 252, 204;">JavaScript</div>
+        <div class="panel" style="--i:2; --clr:142, 252, 157;">HTML</div>
+        <div class="panel" style="--i:3; --clr:215, 252, 142;">CSS</div>
+        <div class="panel" style="--i:4; --clr:252, 252, 142;">SQL</div>
+        <div class="panel" style="--i:5; --clr:252, 208, 142;">MVC</div>
+        <div class="panel" style="--i:6; --clr:252, 142, 142;">Git</div>
+    </div>
+</div>
+
+    <section style="margin-top: -10px;">
         <img src="Images/ColtonSmaller.png" alt="Avatar" class="main-photo">
     </section>
+
+<div class="stage" style="margin-top: -25px;">
+<div class="ring" style="--count:7; --r: -360deg;">
+    <div class="panel" style="--i:0; --clr:142, 202, 252;">GML</div>
+    <div class="panel" style="--i:1; --clr:204, 142, 252;">ASP.NET</div>
+    <div class="panel" style="--i:2; --clr:252, 142, 239;">Unity</div>
+    <div class="panel" style="--i:3; --clr:252, 142, 142;">OOP</div>
+    <div class="panel" style="--i:4; --clr:252, 208, 142;">GameMaker</div>
+    <div class="panel" style="--i:5; --clr:252, 252, 142;">TDD</div>
+    <div class="panel" style="--i:6; --clr:215, 252, 142;">GameMaker</div>
+</div>
+</div>
+<br>
+<br>
+<div class="Skills" style="align-content: center">
+    <div id="slide" style="--count: 5; --max: 3" class="SkillList slide">
+        <div class="item CSharp">
+            C#
+            <div class="itemText">
+                <div class="Name">C#</div>
+                <div class="section">I have 4 years of experience programming in C#.</div>
+                <br>
+                <div class="section">Creating video games websites and practical application</div>
+            </div>
+        </div>
+        <div  class="item">
+            JavaScript
+            <div class="itemText">
+                <div class="Name">JavaScript</div>
+                <div class=section>
+                    I used JavaScript to create interactive UI in my websights. JavaScript is not the language I use the most, but I can write and edit JavaScript code cofertably.
+                </div>
+                <div class="Name">React</div>
+                <div class=section>
+                    have a basic understanding of React, and I am currently working to improve my skills using the framework. My understanding of OOP principles transfer over nicely and I look forward to learning to fully leverage the framework.
+                </div>
+                <div class="section">The ability to create objects that represent elements allows for cleaner and more comprehensive code, and there is not much I love more than clean and pretty code</div>
+                
+            </div>
+        </div>
+        <div  class="item">
+            HTML
+            <div class="itemText">
+            <div class="Name">HTML</div>
+                <div class="section">I have 1 year of experience using HTML. I now have a firm grasp on how to properly use it and combining my C# knowledge through cshtml files I am comfortable creating ASP.NET application</div>
+                <div class="section">Though HTML and CSS are not my favorite since I prefer technical programs, I have found that being able to give my application an interface is highly rewording.</div>
+                <br>
+                <div class="Name">C# and HTML Blazor files</div>
+                <div class="section">Using OOP principles with C# I can create ASP.NET application with SQL and Dapper</div>
+            </div>
+        </div>
+        <div class="item">
+            SQL
+            <div class="itemText">
+                <div class="Name">SQL and Dapper</div>
+                <div class="section">Using Dapper in my ASP.NET application I have created dynamic databases. I have created thing such as a custom shopping website witch allows the user to add products and product images to the database in a comprehensive way.</div>
+                <br>
+                <div class="section">This application uses custom queries to store product information and then using a cshtml page can display that product to users. This application is unfinished, but you can visit its Git page here:
+                    <a id="basicLink" href="https://github.com/Cowlton/MickeyMouseEarsWebsite">https://github.com/Cowlton/MickeyMouseEarsWebsite</a></div>
+                <br>
+                <div class="section"></div>
+            </div>
+        </div>
+        <div class="item">
+            MVC
+              <span class="itemText">MVC stuff</span>
+        </div>
+        <div class="item">
+            TDD
+              <span class="itemText">TDD stuff</span>
+        </div>
+        <div class="item">
+            Git
+              <span class="itemText">Git stuff</span>
+        </div>
+        <div class="item">
+            GameMaker
+              <span class="itemText">GameMaker stuff</span>
+        </div>
+        <div class="item">
+            Unity
+              <span class="itemText">Unity stuff</span>
+        </div>
+    </div>
+</div>
+
     <section class="outer">
         <h1 id="name" class="TextBacground1 inner">Colton H Briggs</h1>
-    <p>Web Developer and Game Programmer</p>
-    <div class="inner">
-        
-        <h2 class="TextBacground1 skills">Skills</h2> 
-        <div>
-            <ul class="TextBacground1 skillslist">
-                <li><a href="CSharp.html"><abbr title="C# Page">C#</abbr></a></li>
-                <li><a href="JavaScript.html"><abbr title="JavaScript Page">JavaScript</abbr></a></li>
-                <li><a href="CSS.html"><abbr title="CSS Page">CSS</abbr></a></li>
-                <li><a href="HTML.html"><abbr title="HTML Page">HTML</abbr></a></li>
-                <li><a href="SQL.html"><abbr title="SQL Page">SQL</abbr></a></li>
-                <li><a href="Unity.html"><abbr title="Unity Page">Unity engine</abbr></a></li>
-                <li><a href="GameMaker.html"><abbr title="GameMaker Page">GameMaker engine</abbr></a></li>
-                <li><a href="Git.html"><abbr title="GitHub Page">GitHub</abbr></a></li>
-            </ul>
+        <br>
+        <div id="display" class="inner">
+            <div class="Name">About</div>
+            <div class="section">Driven ASP.NET Web Developer and Video Game Programmer.</div>
+            <br>
+            <div class="section">4 years of C# programming experience.</div>
+            <br>
+            <div class="section">Graduate of the 45-week Full Stack Software Engineering bootcamp at TrueCoders.</div>
         </div>
-        
-        <h2 style="margin-bottom: 40px" class="TextBacground1 skills"><a href="seniorThesis.html"><abbr
-                title="Senior Thesis Page">Senior Thesis</abbr></a></h2>
-
-    </div>
+        <div id="aboutText" class="itemText">
+            <div>
+                <div class="Name">About</div>
+                <div class="section">Driven ASP.NET Web Developer and Video Game Programmer.</div>
+                <br>
+                <div class="section">4 years of C# programming experience.</div>
+                <br>
+                <div class="section">Graduate of the 45-week Full Stack Software Engineering bootcamp at TrueCoders.</div>
+            </div>
+        </div>
         </section>
+
+<script src="Skills.js"></script>
 </body>
 </html>
+<script src="SlidesScript.js"></script>
+<script src="./Components/index.jsx" type="text/babel"></script>
