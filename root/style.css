@@ -272,10 +272,10 @@ abbr{
     text-decoration: none;
 }
 
-#basicLink{
+.basicLink{
     color: white;
     text-decoration: underline;
 }
-#basicLink:hover{
+.basicLink:hover{
     font-size: 26px;;
 }

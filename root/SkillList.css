@@ -20,6 +20,7 @@
     font-size: 27px;
 }
 
+
 .itemText{
     display: none;
     opacity: 0;
@@ -28,7 +29,7 @@
     --index: sibling-index();
     transform: translate(0,0);
     top: calc(var(--index) * 35px);
-    left: 100px;
+    left: 60px;
     text-align: center;
 }
 .SkillList .item:nth-child(5){

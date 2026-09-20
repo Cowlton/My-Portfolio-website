@@ -1,7 +1,4 @@
-﻿let next = document.querySelector(".next");
-let prev = document.querySelector(".prev");
-
-const slide = document.getElementById('slide');
+﻿const slide = document.getElementById('slide');
 const FinishPoint = getComputedStyle(slide).getPropertyValue('--target');
 window.onload = scheduleVideo;
 let slideshowTimer = null;
@@ -39,7 +36,6 @@ function stopVideo() {
 }
 
 function scheduleVideo() {
-    updateDisplay()
     stopVideo();
     let large = slide.children[1];
     if (!large) return;
@@ -114,6 +110,14 @@ slide.addEventListener('click', function(e) {
     if (index < 0) return;
     clearSelected();
     target.classList.add('selected');
+    
+    try {
+        updateDisplay();
+    }
+    catch (e) {
+        console.log(e);
+    }
+    
     if (index > FinishPoint){
         rotateSlides(index - FinishPoint, 'left');
     }else if (index < FinishPoint){
